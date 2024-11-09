@@ -18,11 +18,3 @@ jobs:
             publish_branch: gh-pages
             destination_dir: ./v${{ github.ref_name }}
             keep_files: true
-        - name: Artifact
-          uses: actions/upload-artifact@v4
-          with:
-           name: Site
-           path: .
-        - name: Link
-          run: |
-            echo "https://${{ github.adress }}.github.io/${{ github.repository }}/v${{ github.ref_name }}"
